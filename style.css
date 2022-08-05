@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
 }
+
+body{
+    background-color: #000;
+    overflow-x: hidden;
+}
 /* colors - #24D3DB  #1BA1A8  #68DBE1 */
 nav{
     width: 100%;
@@ -10,6 +15,9 @@ nav{
     background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(15,88,92,1) 50%, rgba(36,211,219,1) 100%);
     display: flex;
     align-items: center;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 
 }
 
@@ -36,9 +44,69 @@ nav img{
     color: #fff;
     font-size: 24px;
     transition: color 0.3s ease-in-out;
-    font-family: monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+}
+
+.navbar ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover::after{
+    width: 100%;
 }
 
 .navbar ul li a:hover{
     color: black;
+}
+
+/* Hero Page */
+
+.hero{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 10px 8%;
+    
+}
+
+.hero-text{
+    font-size: 35px;
+}
+
+.hero-text p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.hero-text h1{
+    color: #fff;
+    padding: 20px 0;
+}
+
+.hero h1 span{
+    color: #24D3DB;
+}
+
+.portrait{
+    flex: 1;
+    margin-right: 8%;
+    margin-left: 150px;
+}
+
+.portrait img{
+    align-items: right;
+    width: 900px;
+    padding-bottom: 50px;
+    padding-top: 0;
 }
